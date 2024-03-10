@@ -1,0 +1,185 @@
+﻿.UserCircle {
+	background: #084677;
+	border-radius: 100%;
+	width: 6rem;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -4rem;
+}
+
+.radio-inputs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 350px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+	.radio-inputs > * {
+		margin: 1rem;
+	}
+
+.radio-input:checked + .radio-tile {
+	border-color: #2EACFD;
+	box-shadow: 0 5px 10px #2EACFD;
+	color: #2EACFD;
+}
+
+
+	.radio-input:checked + .radio-tile .radio-label {
+		color: #2EACFD;
+	}
+
+	.radio-input:checked + .radio-tile .radio-iconPatient {
+		background-image: url('/img/PatientIconHover.png');
+	}
+
+	.radio-input:checked + .radio-tile .radio-iconFamily {
+		background-image: url('/img/FamilyIconHover.png');
+	}
+
+	.radio-input:checked + .radio-tile .radio-iconDoctor {
+		background-image: url('/img/DoctorIconHover.png');
+	}
+
+.radio-input:focus + .radio-tile {
+	border-color: #2EACFD;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #7eb2e880;
+}
+
+
+.radio-tile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 5.5rem;
+	min-height: 5.5rem;
+	border-radius: 0.5rem;
+	border: 2px solid #b5bfd9;
+	background-color: #fff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.35s ease;
+	cursor: pointer;
+	position: relative;
+}
+
+
+	.radio-tile:hover {
+		border-color: #2EACFD;
+	}
+
+.radio-iconPatient {
+	width: 3rem;
+	height: 3rem;
+	background-image: url('/img/PatientIcon.png');
+	background-size: 100%;
+}
+
+.radio-iconFamily {
+	width: 3rem;
+	height: 3rem;
+	background-image: url('/img/FamilyIcon.png');
+	background-size: 100%;
+}
+
+.radio-iconDoctor {
+	width: 3rem;
+	height: 3rem;
+	background-image: url('/img/DoctorIcon.png');
+	background-size: 100%;
+}
+
+.radio-label {
+	color: #707070;
+	transition: 0.375s ease;
+	text-align: center;
+}
+
+.radio-input {
+	position: absolute;
+}
+
+.arrow {
+	--arrow-size: 1em;
+	--arrow-color: #96c7e9;
+	--arrow-color-hover: #00a4ff;
+	position: relative;
+	display: inline-flex;
+	vertical-align: middle;
+	width: var(--arrow-size);
+	height: var(--arrow-size);
+	overflow: hidden;
+}
+
+	.arrow::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		box-sizing: border-box;
+		display: inline-block;
+		width: calc( var(--arrow-size) * .7071);
+		height: calc( var(--arrow-size) * .7071);
+		border-top: calc( var(--arrow-size) / 5 ) solid var(--arrow-color);
+		transition: all 150ms ease-in-out;
+	}
+
+	.arrow.left::after {
+		left: calc( var(--arrow-size) / 5 );
+		border-left: calc( var(--arrow-size) / 5 ) solid var(--arrow-color);
+		transform-origin: top left;
+		rotate: -45deg;
+	}
+
+	.arrow.left:hover::after {
+		box-shadow: calc( var(--arrow-size) / -8 ) calc( var(--arrow-size) / -8 ) 0 var(--arrow-color);
+	}
+
+a:hover .arrow.left::after {
+	border-color: var(--arrow-color-hover);
+}
+
+a:hover .arrow.left::after {
+	box-shadow: calc( var(--arrow-size) / -8 ) calc( var(--arrow-size) / -8 ) 0 var(--arrow-color);
+}
+
+.BackLink {
+	color: #96c7e9;
+	text-decoration: none;
+}
+
+	.BackLink:hover {
+		color: #00a4ff;
+	}
+.UserCircle {
+	background: #084677;
+	border-radius: 100%;
+	width: 6rem;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -4rem;
+}
+
+.LoginBtn {
+	border-radius: 0 0 2rem 2rem;
+	width: -webkit-fill-available;
+	padding: 0.5rem;
+	color: white;
+	font-size: larger;
+	border: transparent;
+	background: #0088f9;
+	transition: 500ms;
+}
+
+	.LoginBtn:hover {
+		transform: scale(1.1);
+		color: #0088f9;
+		background: #fcfcfccc;
+	}
